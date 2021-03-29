@@ -4,6 +4,7 @@
   "description": "",
   "main": "meadowlark.js",
   "scripts": {
+    "lint": "eslint meadowlark.js lib",
     "test": "jest"
   },
   "author": "",
@@ -13,6 +14,10 @@
     "express-handlebars": "^5.2.1"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^26.6.3",
+    "portfinder": "^1.0.28",
+    "puppeteer": "^8.0.0"
   }
 }

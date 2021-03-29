@@ -20,7 +20,12 @@ meadowlark.use(handlers.notFound);
 
 meadowlark.use(handlers.serverError);
 
-meadowlark.listen(port, () => console.log(
-    `Express запущен на https://localhost:${port};` +
-    `нажмите Ctr+C для завершения.`
-));
+if(require.main === module) {
+    meadowlark.listen(port, () => console.log(
+        `Express запущен на https://localhost:${port};` +
+        `нажмите Ctr+C для завершения.`
+    ));
+} else {
+    module.exports = meadowlark;
+}
+
